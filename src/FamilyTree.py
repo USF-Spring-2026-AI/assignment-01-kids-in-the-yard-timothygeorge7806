@@ -59,7 +59,7 @@ class FamilyTree:
                 if child not in visited:
                     visited.append(child)
                     queue.append(child)
-        return len(visited)
+        print("The tree contains " + str(len(visited)) + " people total")
 
     # Get and print total number of people in the tree by decade (Debug)
     def person_count_by_decade(self):
@@ -149,10 +149,10 @@ class FamilyTree:
             print("Total number of people in the tree by (D)ecade")
             print("(N)ames duplicated")
             print("(G)enerate new tree")
-            print("(E)xit")
+            print("(E)xit\n> ", end="")
             answer = input()
             if answer == 'T':
-                print(self.person_count())
+                self.person_count()
             elif answer == 'D':
                 self.person_count_by_decade()
             elif answer == 'N':
