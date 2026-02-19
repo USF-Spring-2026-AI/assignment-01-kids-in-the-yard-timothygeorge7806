@@ -121,7 +121,7 @@ class PersonFactory:
         has_partner = random.random() < prob_partner
         partner = None
         if has_partner and parents is not None: # Change later
-            partner_year_born = year_born + random.randint(-10,10)
+            partner_year_born = min(year_born + random.randint(-10,10), 2120) # Ensure birth is capped at 2120
             partner = self._create_partner(partner_year_born)
             person.set_spouse(partner)
             partner.set_spouse(person)
