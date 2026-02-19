@@ -148,6 +148,7 @@ class FamilyTree:
             print("(T)otal number people in the tree")
             print("Total number of people in the tree by (D)ecade")
             print("(N)ames duplicated")
+            print("(G)enerate new tree")
             print("(E)xit")
             answer = input()
             if answer == 'T':
@@ -156,6 +157,9 @@ class FamilyTree:
                 self.person_count_by_decade()
             elif answer == 'N':
                 self.names_duplicated()
+            elif answer == 'G':
+                print("Building new family tree...")
+                self.build_tree(pf)
             elif answer == 'E':
                 return 0
             else:
