@@ -4,12 +4,30 @@ import random
 import math
 import numpy as np
 
+
+# TODO: Make sure format is consistent
+
 class PersonFactory:
     life_expectancy = {}
     gender_name_probability = {}
     first_names = {}
     last_names = {}
     birth_and_marriage_rates = {}
+
+    def get_life_expectancy(self):
+        return self.life_expectancy
+    
+    def get_gender_name_probability(self):
+        return self.gender_name_probability
+    
+    def get_first_names(self):
+        return self.first_names
+    
+    def get_last_names(self):
+        return self.last_names
+    
+    def get_birth_and_marriage_rates(self):
+        return self.birth_and_marriage_rates
 
     # Constructor to initialize the PersonFactory with an empty life expectancy dictionary
     def __init__(self):
